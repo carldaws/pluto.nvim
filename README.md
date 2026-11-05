@@ -40,3 +40,4 @@ Highlights are tuned for lualine (`theme = "pluto"`, or the default `"auto"`), m
 ## Extras
 
 `extras/ghostty/pluto` is a matching Ghostty theme. Copy it to `~/.config/ghostty/themes/pluto` and set `theme = pluto`.
+`extras/pluto.png` is the background image seen in the screenshot above.
