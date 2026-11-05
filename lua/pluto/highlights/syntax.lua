@@ -1,0 +1,71 @@
+return function(c, opts)
+  local styles = opts.styles
+
+  local function styled(spec, style)
+    return vim.tbl_extend("force", spec, style)
+  end
+
+  return {
+    Comment = styled({ fg = c.rosy_brown }, styles.comments),
+    Constant = { fg = c.taupe },
+    String = { fg = c.tan },
+    Character = { fg = c.tan },
+    Identifier = styled({ fg = c.fg0 }, styles.variables),
+    Function = styled({ fg = c.fg2 }, styles.functions),
+    Statement = { fg = c.heather },
+    Keyword = styled({ fg = c.heather }, styles.keywords),
+    Conditional = { link = "Keyword" },
+    Repeat = { link = "Keyword" },
+    Label = { link = "Keyword" },
+    Exception = { link = "Keyword" },
+    StorageClass = { link = "Keyword" },
+    Operator = { fg = c.purple_grey },
+    PreProc = { fg = c.heather },
+    Macro = { fg = c.heather },
+    Type = { fg = c.fg1 },
+    Special = { fg = c.purple_grey },
+    SpecialChar = { fg = c.taupe },
+    Tag = { fg = c.heather },
+    Delimiter = { fg = c.purple_grey },
+    SpecialComment = { fg = c.heather },
+    Debug = { fg = c.terracotta },
+    Underlined = { underline = true },
+    Bold = { bold = true },
+    Italic = { italic = true },
+    Error = { fg = c.terracotta },
+    Todo = { fg = c.fawn, bold = true },
+
+    ["@variable"] = { link = "Identifier" },
+    ["@variable.builtin"] = { link = "Constant" },
+    ["@variable.member"] = { link = "@property" },
+    ["@constant.builtin"] = { link = "Constant" },
+    ["@module"] = { fg = c.fg1 },
+    ["@module.builtin"] = { link = "Constant" },
+    ["@property"] = { fg = c.fg1 },
+    ["@function.builtin"] = { link = "Function" },
+    ["@constructor"] = { link = "Type" },
+    -- Lua captures the braces of every table literal as a constructor.
+    ["@constructor.lua"] = { link = "Delimiter" },
+    ["@type.builtin"] = { link = "Type" },
+    ["@string.special.symbol"] = { link = "Constant" },
+    ["@punctuation.special"] = { fg = c.taupe },
+    ["@tag.attribute"] = { fg = c.taupe },
+    ["@tag.builtin"] = { link = "Tag" },
+    ["@tag.delimiter"] = { link = "Delimiter" },
+
+    ["@markup"] = { fg = c.fg0 },
+    ["@markup.heading.1"] = { fg = c.tan, bold = true },
+    ["@markup.heading.2"] = { fg = c.taupe, bold = true },
+    ["@markup.heading.3"] = { fg = c.heather, bold = true },
+    ["@markup.heading.4"] = { fg = c.fg1, bold = true },
+    ["@markup.heading.5"] = { fg = c.fg0, bold = true },
+    ["@markup.heading.6"] = { fg = c.purple_grey, bold = true },
+    ["@markup.raw"] = { fg = c.tan },
+    ["@markup.quote"] = { fg = c.purple_grey, italic = true },
+    ["@markup.list"] = { fg = c.taupe },
+    ["@markup.list.checked"] = { fg = c.grey_green },
+    ["@markup.list.unchecked"] = { fg = c.purple_grey },
+    ["@markup.link"] = { fg = c.taupe },
+    ["@markup.link.url"] = { fg = c.taupe, underline = true },
+  }
+end
