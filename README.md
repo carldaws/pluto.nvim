@@ -1,6 +1,8 @@
 # pluto.nvim
 
-A dark Neovim colour scheme taken from the New Horizons photo of Pluto: the cream and peach of the heart, the violet-grey of the plains and their shadows, and the oxblood of the dark equatorial band. The palette keeps the photo's low saturation and roughly its proportions: mostly cream, peach and violet-grey, with oxblood used sparingly.
+A dark, duotone theme for Neovim inspired by the New Horizons photo of Pluto.
+
+![Theme screenshot](assets/screenshot.png)
 
 ## Install
 
