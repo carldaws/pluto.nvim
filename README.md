@@ -37,6 +37,10 @@ require("pluto").setup({
 
 Highlights are tuned for lualine (`theme = "pluto"`, or the default `"auto"`), mini.icons, mini.pick and oil.nvim. Anything that links to the built-in groups will follow along.
 
+## Palette
+
+![Theme palette](assets/palette.png)
+
 ## Extras
 
 `extras/ghostty/pluto` is a matching Ghostty theme. Copy it to `~/.config/ghostty/themes/pluto` and set `theme = pluto`.
